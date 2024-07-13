@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="utilities.TestListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Run in Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.AddToCart">
+                <methods>
+                    <include name="addingPhone"/>
+                    <include name="addingLaptop"/>
+                    <include name="addToCart"/>
+                </methods>
+            </class>
+            <class name="tests.CheckOut">
+                <methods>
+                    <include name="addingPayment"/>
+                </methods>
+            </class>
+            <class name="tests.HomepageLinks">
+                <methods>
+                    <include name="toVerifyTermsAndConditions"/>
+                    <include name="toVerifyPrivacy"/>
+                    <include name="toVerifyDontSell"/>
+                </methods>
+            </class>
+            <class name="tests.Login">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin1"/>
+                    <include name="invalidLogin2"/>
+                    <include name="validLogin3"/>
+                </methods>
+            </class>
+            <class name="tests.Menu">
+                <methods>
+                    <include name="menuDeals"/>
+                    <include name="menuServices"/>
+                    <include name="menuBrands"/>
+                </methods>
+            </class>
+            <class name="tests.SignUp">
+                <methods>
+                    <include name="createAccount"/>
+                </methods>
+            </class>
+            <class name="tests.ValidURL">
+                <methods>
+                    <include name="validatingURL"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Run in Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.AddToCart">
+                <methods>
+                    <include name="addingPhone"/>
+                    <include name="addingLaptop"/>
+                    <include name="addToCart"/>
+                </methods>
+            </class>
+            <class name="tests.CheckOut">
+                <methods>
+                    <include name="addingPayment"/>
+                </methods>
+            </class>
+            <class name="tests.HomepageLinks">
+                <methods>
+                    <include name="toVerifyTermsAndConditions"/>
+                    <include name="toVerifyPrivacy"/>
+                    <include name="toVerifyDontSell"/>
+                </methods>
+            </class>
+            <class name="tests.Login">
+                <methods>
+                    <include name="validLogin"/>
+                    <include name="invalidLogin1"/>
+                    <include name="invalidLogin2"/>
+                    <include name="validLogin3"/>
+                </methods>
+            </class>
+            <class name="tests.Menu">
+                <methods>
+                    <include name="menuDeals"/>
+                    <include name="menuServices"/>
+                    <include name="menuBrands"/>
+                </methods>
+            </class>
+            <class name="tests.SignUp">
+                <methods>
+                    <include name="createAccount"/>
+                </methods>
+            </class>
+            <class name="tests.ValidURL">
+                <methods>
+                    <include name="validatingURL"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

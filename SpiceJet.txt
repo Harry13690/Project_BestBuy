@@ -1,0 +1,79 @@
+Started by user Hariprasath
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\SpiceJetProject
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\SpiceJetProject\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Harry13690/Project_SpiceJet # timeout=10
+Fetching upstream changes from https://github.com/Harry13690/Project_SpiceJet
+ > git --version # timeout=10
+ > git --version # 'git version 2.44.0.windows.1'
+ > git fetch --tags --force --progress -- https://github.com/Harry13690/Project_SpiceJet +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision b1eae39330cd289491303ca103ab27b65ffd6073 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b1eae39330cd289491303ca103ab27b65ffd6073 # timeout=10
+Commit message: "Update pom.xml"
+ > git rev-list --no-walk b1eae39330cd289491303ca103ab27b65ffd6073 # timeout=10
+[SpiceJetProject] $ cmd /c call C:\Windows\TEMP\jenkins8309282733471106472.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\SpiceJetProject>mvn test 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.example:SpiceJetProject >---------------------
+[INFO] Building SpiceJetProject 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ SpiceJetProject ---
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\SpiceJetProject\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ SpiceJetProject ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 1 source file with javac [debug target 21] to target\classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ SpiceJetProject ---
+[INFO] skip non existing resourceDirectory C:\ProgramData\Jenkins\.jenkins\workspace\SpiceJetProject\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ SpiceJetProject ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 14 source files with javac [debug target 21] to target\test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ SpiceJetProject ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running utilities.TestListener
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.216 s -- in utilities.TestListener
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.763 s
+[INFO] Finished at: 2024-07-13T15:32:25+05:30
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
